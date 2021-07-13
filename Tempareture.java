@@ -3,11 +3,11 @@ public class Tempareture
 {
   public static void main(String[] args) 
   {
-	  Scanner sc = new Scanner(System.in);
+	  Scanner utility= new Scanner(System.in);
 	  boolean flag = true;
 	  String in;
 	  System.out.println("Enter the tempareture which do you want to convert into celsius to fahrenheit");
-	  in=sc.next();
+	  in=utility.next();
 	  while(flag)
 	  {
 		  if (utility.isNumber(in) )
@@ -17,7 +17,7 @@ public class Tempareture
 		  else
 		  {
 			  System.out.println("Enter the Correct type of tempareture");
-			  in=sc.next();
+			  in=utility.next();
 		  }
 	  } 
 		  double temp=Double.parseDouble(in);
@@ -26,7 +26,7 @@ public class Tempareture
 		  boolean flag1=true;
 		  String in1;
 		  System.out.println("Enter the tempareture which do you want to convert into fahrenheit to celsius");
-		  in1=sc.next();
+		  in1=utility.next();
 		  while(flag1)
 		  {
 			  if (utility.isNumber(in1) )

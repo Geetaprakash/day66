@@ -11,7 +11,7 @@ public class Newtons
 			count++;
 			root = 0.5 * (x + (n / x));
 			if (Math.abs(root - x) < l)
-				break;
+			break;
 			x = root;
 		}
 	

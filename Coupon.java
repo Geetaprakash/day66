@@ -1,19 +1,34 @@
+import java.util.Scanner;
 public class Coupon 
 {
 	public static void main(String[] args) 
 	{
-		char[] chars="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789".toCharArray();
-		int max=100000000;
-		int random=(int) (Math.random()*max);	
-		StringBuffer sb=new StringBuffer();
-		
-		while (random>0)
-		{
-			sb.append(chars[random % chars.length]);
-			random /= chars.length;
-		}
+		Scanner co=new Scanner(System.in);
+		int dis=1;
+		int cou=0;
+			System.out.println("ENTER THE COUPON NUMBERS");
+			int n=co.nextInt();
+			
+			int[] collec=new int[n];
 
-		String couponCode=sb.toString();
-		System.out.println("Coupon Code: "+couponCode);	
-	}
+			while(dis<=n)
+			{
+				int val=(int) (Math.random()*n);
+				cou++;
+				System.out.println("value " +(val+1));
+				if(collec[val]!=val+1)
+				{
+					dis++;
+					collec[val]=val+1;
+				}
+						
+			}
+
+System.out.println("TOTAL NUMBERS TO GET "+n+" DIFFERENT COUPON NUM ARE " +cou);
+System.out.println(" ");
+System.out.println("ARRAY ");
+System.out.println(" ");
+for (int i=0;i<n;i++)
+System.out.println(i+ " ARRAY ELEMENTS ARE " +collec[i]);
+}
 }
